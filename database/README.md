@@ -17,4 +17,7 @@
 * Implementação
 <!--te-->
 
+ O projeto será desenhado usando o software [MySQL Workbench](https://www.mysql.com/products/workbench/)
+
+
 
