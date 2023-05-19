@@ -32,4 +32,4 @@ O projeto é focado na área médica, atendendo diversas clínicas e guardando d
 
 A estrutura básica do projeto é seguinte:
 <br>
-<img alt="Diagrama" title="#Diagrama" src="./assets/diagram_1.png" width=400/>
+<img alt="Diagrama" title="#Diagrama" src="./assets/diagram_1.png" height=400/>
