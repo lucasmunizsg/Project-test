@@ -34,8 +34,6 @@ A estrutura básica do projeto é a seguinte:
 <br>
 <img alt="Diagrama" title="#Diagrama" src="./assets/diagram_1.png" height=400/>
 A estrutura básica do projeto é seguinte:
-<br>
-<img alt="Diagrama" title="#Diagrama" src="./assets/diagram_1.png" height=400/>
 
 
 Em resumo os requisitos são:
