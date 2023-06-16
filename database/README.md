@@ -33,7 +33,6 @@ O projeto é focado na área médica, atendendo diversas clínicas e guardando d
 A estrutura básica do projeto é a seguinte:
 <br>
 <img alt="Diagrama" title="#Diagrama" src="./assets/diagram_1.png" height=400/>
-A estrutura básica do projeto é seguinte:
 
 
 Em resumo os requisitos são:
