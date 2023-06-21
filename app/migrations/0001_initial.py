@@ -15,7 +15,6 @@ class Migration(migrations.Migration):
             name='Carros',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-<<<<<<< HEAD
                 ('NOME COMPLETO', models.CharField(max_length=150)),
                 ('DATA DE NASCIMENTO', models.DataField(max_length=100)),
                 ('CPF', models.IntegerField()),
@@ -54,11 +53,6 @@ class Migration(migrations.Migration):
                 ('RG RESPONSÁVEL', models.CharField()),
                 ('ORGÃO EXP RESPONSÁVEL', models.CharField()),
 
-=======
-                ('Modelo', models.CharField(max_length=150)),
-                ('Marca', models.CharField(max_length=100)),
-                ('ano', models.IntegerField()),
->>>>>>> origin/master
             ],
         ),
     ]
