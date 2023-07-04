@@ -8,77 +8,22 @@
 
 <body>
     <div class="col-8 m-auto pt-2 pb-2 text-center">
-        <h1>Registro</h1>
+        <h1> Cadastro </h1>
     </div>
 
-        <h3> Cadastro Paciente</h3>
-        <form class="form-inline" name="form" id="form" action="{% if db %}/update/{{db.id}}/{% else %}/create/{% endif %}" method="post">
-          <div class="col-8 m-auto pt-4 pb-5 row">
-            <div class="col">
-                {% csrf_token %}
-                <div class="form-group mt-4">NOME COMPLETO: {{form.modelo}}</div>
-                <div class="form-group mt-4">DATA DE NASCIMENTO: {{form.marca}}</div>
-                <div class="form-group mt-4">CPF: {{form.ano}}</div>
-                <div class="form-group mt-4">RG: {{form.ano}}</div>
-                <div class="form-group mt-4">ORGÃO EXP/ RG PACINETE: {{form.ano}}</div>
-                <br>
-                <div class="form-group">
-                    <label for="exampleFormControlFile1">FOTO:</label>
-                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                </div>
-                <div class="form-group mt-4">NIS: {{form.ano}}</div>
-                <div class="form-group mt-4">CID: {{form.ano}}</div>
-                <div class="form-group mt-4">MEDICO SOLICITANTE: {{form.idade}}</div>
-                <div class="form-group mt-4">CNS: {{form.ano}}</div>
-                <div class="form-group mt-4">IDADE: {{form.idade}}</div>
-                <div class="form-group mt-4">SEXO: {{form.idade}}</div>
-                <div class="form-group mt-4">RAÇA/COR: {{form.idade}}</div>
-                <div class="form-group mt-4">ADMISSÃO: {{form.idade}}</div>
-                <div class="form-group mt-4">ENDEREÇO: {{form.idade}}</div>
-                <div class="form-group mt-4">CODIGO DE LOGRADOURO: {{form.idade}}</div>
-                <div class="form-group mt-4">Nº DA CASA: {{form.idade}}</div>
-                <div class="form-group mt-4">COMPLEMENTO : {{form.idade}}</div>
-                <div class="form-group mt-4">BAIRRO: {{form.idade}}</div>
-                <div class="form-group mt-4">MUNICÍPIO: {{form.idade}}</div>
-                <div class="form-group mt-4">ESTADO CIVIL: {{form.idade}}</div>
-                <br>
-                <div>DEMANDA GLOBAL:
-                    <select class="custom-select custom-select-lg mb-3">
-                      <option selected>Selecione</option>
-                      <option value="1">FISIO</option>
-                      <option value="2">FONO</option>
-                      <option value="3">T.O</option>
-                      <option value="4">PSICO</option>
-                      <option value="5">PSICOPEDAGOGIA</option>
-                    </select>
-                </div>
-                <hr>
-                <h3>Cadastro Responsaveis</h3>
-                <div class="form-group mt-4">NOME DA MÃE: {{form.idade}}</div>
-                <div class="form-group mt-4">CPF MÃE: {{form.idade}}</div>
-                <div class="form-group mt-4">RG DA MÃE: {{form.idade}}</div>
-                <div class="form-group mt-4">RG SSP MÃE: {{form.idade}}</div>
-                <div class="form-group mt-4">NIS/MÃE: {{form.idade}}</div>
-                <div class="form-group mt-4">NOME DO PAI: {{form.idade}}</div>
-                <div class="form-group mt-4">CPF PAI: {{form.idade}}</div>
-                <div class="form-group mt-4">RG PAI: {{form.idade}}</div>
-                <div class="form-group mt-4">RG SSP PAI: {{form.idade}}</div>
-                <div class="form-group mt-4">TELEFONE BPA: {{form.idade}}</div>
-                <div class="form-group mt-4">TELEFONE ADICIONAL: {{form.idade}}</div>
-                <div class="form-group mt-4">TELEFONE 3: {{form.idade}}</div>
-                <div type="email" class="form-group mt-4">E-MAIL: {{form.idade}}</div>
-                <div class="form-group mt-4">RESPONSÁVEL: {{form.idade}}</div>
-                <div class="form-group mt-4">DOC RESPONSÁVEL CPF: {{form.idade}}</div>
-                <div class="form-group mt-4">RG RESPONSÁVEL: {{form.idade}}</div>
-                <div class="form-group mt-4">ORGÃO EXP RESPONSÁVEL: {{form.idade}}</div>
+    <div class="col-8 m-auto pt-2 pb-2 text-center">
+        <a href="http://localhost:8000/" class="btn btn-info">Voltar</a>
+    </div>
 
-                <input type="submit" class="btn btn-success" value="Salvar">
-           </div>
-          </div>
+    <div class="col-8 m-auto pt-4 pb-5 text-center">
+        <form name="form" id="form" action="{% if db %}/update/{{db.id}}/{% else %}/create/{% endif %}" method="post">
+            {% csrf_token %}
+            <div class="form-group mt-4">Moldelo: {{form.modelo}}</div>
+            <div class="form-group mt-4">Marca: {{form.marca}}</div>
+            <div class="form-group mt-4">Ano: {{form.ano}}</div>
+            <input type="submit" class="btn btn-success" value="Salvar">
         </form>
+    </div>
 
-        <div class="col-8 m-auto pt-2 pb-2 text-center">
-            <a href="http://localhost:8000/" class="btn btn-info">Voltar</a>
-        </div>
 </body>
 </html>
