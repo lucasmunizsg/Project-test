@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="col-8 m-auto pt-2 pb-2 text-center">
+        <h1>Registro</h1>
+    </div>
+
+        <h3> Cadastro Paciente</h3>
+        <form class="form-inline" name="form" id="form" action="{% if db %}/update/{{db.id}}/{% else %}/create/{% endif %}" method="post">
+          <div class="col-8 m-auto pt-4 pb-5 row">
+            <div class="col">
+                {% csrf_token %}
+                <div class="form-group mt-4">NOME COMPLETO: {{form.nome_completo}}</div>
+                <div class="form-group mt-4">NASCIMENTO: {{form.data_de_nascimento}}</div>
+                <div class="form-group mt-4">CPF: {{form.cpf}}</div>
+                <div class="form-group mt-4">RG: {{form.rg}}</div>
+                <div class="form-group mt-4">ORGÃO_EXP_RG_PACIENTE: {{form.orgao_exp_rg_paciente}}</div>
+                <br>
+                <div class="form-group">
+                    <label for="exampleFormControlFile1">FOTO:</label>
+                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                </div>
+                <div class="form-group mt-4">NIS: {{form.nis}}</div>
+                <div class="form-group mt-4">CID: {{form.cid}}</div>
+                <div class="form-group mt-4">MEDICO SOLICITANTE: {{form.medico_solicitante}}</div>
+                <div class="form-group mt-4">CNS: {{form.cns}}</div>
+                <div class="form-group mt-4">IDADE: {{form.idade}}</div>
+                <div class="form-group mt-4">SEXO: {{form.sexo}}</div>
+                <div class="form-group mt-4">RAÇA/COR: {{form.raca_cor}}</div>
+                <div class="form-group mt-4">ADMISSÃO: {{form.admissao}}</div>
+                <div class="form-group mt-4">ENDEREÇO: {{form.endereco}}</div>
+                <div class="form-group mt-4">CODIGO DE LOGRADOURO: {{form.codigo_de_logradrouro}}</div>
+                <div class="form-group mt-4">N DA CASA: {{form.n_da_casa}}</div>
+                <div class="form-group mt-4">COMPLEMENTO : {{form.complemento}}</div>
+                <div class="form-group mt-4">BAIRRO: {{form.bairro}}</div>
+<!--             ADICIONAR AINDA   <div class="form-group mt-4">ESTADO: {{form.estado}}</div>-->
+                <div class="form-group mt-4">MUNICÍPIO: {{form.municipio}}</div>
+                <div class="form-group mt-4">ESTADO CIVIL: {{form.estado_civil}}</div>
+                <br>
+                <div>DEMANDA GLOBAL:
+                    <select class="custom-select custom-select-lg mb-3">
+                      <option selected>Selecione</option>
+                      <option value="1">FISIO</option>
+                      <option value="2">FONO</option>
+                      <option value="3">T.O</option>
+                      <option value="4">PSICO</option>
+                      <option value="5">PSICOPEDAGOGIA</option>
+                    </select>
+                </div>
+                <hr>
+                <h3>Cadastro Responsaveis</h3>
+                <div class="form-group mt-4">NOME DA MÃE: {{form.nome_da_mae}}</div>
+                <div class="form-group mt-4">CPF MÃE: {{form.cpf_mae}}</div>
+                <div class="form-group mt-4">RG DA MÃE: {{form.rg_da_mae}}</div>
+                <div class="form-group mt-4">RG SSP MÃE: {{form.rg_ssp_mae}}</div>
+                <div class="form-group mt-4">NIS/MÃE: {{form.nis_mae}}</div>
+                <div class="form-group mt-4">NOME DO PAI: {{form.nome_do_pai}}</div>
+                <div class="form-group mt-4">CPF PAI: {{form.cpf_pai}}</div>
+                <div class="form-group mt-4">RG PAI: {{form.rg_pai}}</div>
+                <div class="form-group mt-4">RG SSP PAI: {{form.rg_ssp_pai}}</div>
+                <div class="form-group mt-4">TELEFONE BPA: {{form.telefone_bpa}}</div>
+                <div class="form-group mt-4">TELEFONE ADICIONAL: {{form.telefone_principal}}</div>
+                <div class="form-group mt-4">TELEFONE 3: {{form.telefone_adicional}}</div>
+                <div type="email" class="form-group mt-4">E-MAIL: {{form.email}}</div>
+                <div class="form-group mt-4">RESPONSÁVEL: {{form.responsavel}}</div>
+                <div class="form-group mt-4">DOC RESPONSÁVEL CPF: {{form.doc_responsavel_cpf}}</div>
+                <div class="form-group mt-4">RG RESPONSÁVEL: {{form.rg_responsavel}}</div>
+                <div class="form-group mt-4">ORGÃO EXP RESPONSÁVEL: {{form.orgao_exp_responsavel}}</div>
+
+                <input type="submit" class="btn btn-success" value="Salvar">
+           </div>
+          </div>
+        </form>
+
+        <div class="col-8 m-auto pt-2 pb-2 text-center">
+            <a href="http://localhost:8000/" class="btn btn-info">Voltar</a>
+        </div>
+</body>
+</html>
