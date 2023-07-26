@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from app.forms import RegisterForm
 from app.models import Register
-# from django.core.paginator import Paginator
+from django.core.paginator import Paginator
 
 
 # Create your views here.

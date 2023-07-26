@@ -1,14 +1,14 @@
 from django.db import models
-# from django import forms
+from django import forms
 
 
 # Create your models here.
 class Register(models.Model):
     nome_completo = models.CharField(max_length=100)
     data_de_nascimento = models.DateField(max_length=100)
-    cpf = models.CharField(max_length=100)
-    rg = models.CharField(max_length=100)
-    orgao_exp_rg_paciente = models.CharField(max_length=100)
+    cpf = models.CharField(max_length=14)
+    rg = models.CharField(max_length=10)
+    orgao_exp_rg_paciente = models.CharField(max_length=4)
     nis = models.CharField(max_length=100)
     cid = models.CharField(max_length=100)
     medico_solicitante = models.CharField(max_length=100)
