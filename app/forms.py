@@ -13,4 +13,4 @@ class RegisterForm(ModelForm):
             'cpf_pai','rg_pai','rg_ssp_pai','telefone_bpa',
             'telefone_principal','telefone_adicional','responsavel',
             'doc_responsavel_cpf','rg_responsavel',
-            'orgao_exp_responsavel']
+            'orgao_exp_responsavel', 'demanda_global']

@@ -64,9 +64,10 @@
                       <option value="Feminino">Feminino</option>
                  </select>
                </div>
+
                <div class="form-group col-md-2">
                  <label>RAÇA/COR</label>
-                 <select class="form-control" {{form.sexo}}>
+                 <select class="form-control" {{raca_cor}}>
                       <option selected>Selecione</option>
                       <option value="Preto">Preto</option>
                       <option value="Pardo">Pardo</option>
@@ -102,9 +103,9 @@
                    <label>CNS</label>
                    <input class="form-control" placeholder=" " {{form.cns}}
                </div>
-               <div class="form-group col-md-3">
+               <div class="form-group col-md-2">
                  <label>DEMANDA GLOBAL</label>
-                 <select class="form-control">
+                 <select class="form-control" {{demanda_global}}>
                       <option selected>Selecione</option>
                       <option value="FISIO">FISIO</option>
                       <option value="FONO">FONO</option>
@@ -132,103 +133,107 @@
                    <label>Nº DA CASA</label>
                    <input class="form-control" placeholder="100" {{form.n_da_casa}}
                </div>
-               <div class="form-group col-md-2">
+             </div>
+
+             <div class="form-row">
+                <div class="form-group col-md-2">
                    <label>BAIRRO</label>
                    <input class="form-control" placeholder="Centro" {{form.bairro}}
                </div>
-               <div class="form-group col-md-3">
+               <div class="form-group col-md-2">
                    <label>ESTADO</label>
                    <input class="form-control" placeholder=" " {{form.estado}}
                </div>
-               <div class="form-group col-md-3">
+               <div class="form-group col-md-2">
                    <label>MUNICÍPIO</label>
                    <input class="form-control" placeholder=" " {{form.municipio}}
                </div>
              </div>
-             <hr>
+
+              <h3> Cadastro Responsaveis</h3>
              <div class="form-row">
-               <div class="form-group col-md-6">
+               <div class="form-group col-md-5">
                    <label>NOME DA MÃE</label>
                    <input class="form-control" placeholder=" " {{form.nome_da_mae}}
                </div>
-               <div class="form-group col-md-6">
+               <div class="form-group col-md-2">
                    <label>CPF MÃE</label>
-                   <input class="form-control" placeholder=" "  {{form.cpf_mae}}
+                   <input class="form-control" placeholder="000.000.000-00"  {{form.cpf_mae}}
                </div>
-               <div class="form-group col-md-6">
-                   <label>RG DA MÃE</label>
-                   <input class="form-control" placeholder=" " {{form.rg_da_mae}}
+               <div class="form-group col-md-2">
+                   <label>RG MÃE</label>
+                   <input class="form-control" placeholder="21.603.163-4" {{form.rg_da_mae}}
                </div>
-               <div class="form-group col-md-6">
-                   <label>RG SSP MÃE</label>
-                   <input class="form-control" placeholder=" "{{form.rg_ssp_mae}}
+               <div class="form-group col-md-2">
+                   <label>EXP RG MÃE</label>
+                   <input class="form-control" placeholder="SSP"{{form.rg_ssp_mae}}
                </div>
                <div class="form-group col-md-2">
                    <label>NIS/MÃE:</label>
                    <input class="form-control" placeholder=" " {{form.nis_mae}}
                </div>
              </div>
-            <hr>
+
              <div class="form-row">
-               <div class="form-group col-md-6">
+               <div class="form-group col-md-5">
                    <label>NOME DO PAI</label>
                    <input class="form-control" placeholder=" " {{form.nome_do_pai}}
                </div>
-               <div class="form-group col-md-6">
+               <div class="form-group col-md-2">
                    <label>CPF PAI</label>
                    <input class="form-control" placeholder=" " {{form.cpf_pai}}
                </div>
-               <div class="form-group col-md-6">
+               <div class="form-group col-md-2">
                    <label>RG PAI</label>
-                   <input class="form-control" placeholder=" " {{form.rg_pai}}
+                   <input class="form-control" placeholder="21.603.163-4" {{form.rg_pai}}
                </div>
-               <div class="form-group col-md-6">
-                   <label>RG SSP PAI</label>
+               <div class="form-group col-md-2">
+                   <label>EXP RG PAI</label>
                    <input class="form-control" placeholder=" " {{form.rg_ssp_pai}}
                </div>
              </div>
 
              <div class="form-row">
-               <div class="form-group col-md-6">
+               <div class="form-group col-md-3">
                    <label>TELEFONE BPA</label>
                    <input class="form-control" placeholder=" "{{form.telefone_bpa}}
                </div>
-               <div class="form-group col-md-6">
+               <div class="form-group col-md-3">
                    <label>TELEFONE PRINCIPAL</label>
                    <input class="form-control" placeholder=" "{{form.telefone_principal}}
                </div>
-               <div class="form-group col-md-6">
+               <div class="form-group col-md-3">
                    <label>TELEFONE ADICIONAL</label>
                    <input class="form-control" placeholder=" "{{form.telefone_adicional}}
                </div>
              </div>
+
              <div class="form-row">
-               <div class="form-group col-md-6">
+               <div class="form-group col-md-3">
                    <label>E-MAIL</label>
                    <input class="form-control" placeholder="exemplo@gmail.com" {{form.email}}
                </div>
              </div>
 
-             <div class="form-row">
-               <div class="form-group col-md-6">
-                   <label>RESPONSÁVEL</label>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                   <label>NOME DO RESPONSÁVEL</label>
                    <input class="form-control" placeholder=" "{{form.responsavel}}
                </div>
-               <div class="form-group col-md-6">
+               <div class="form-group col-md-3">
                    <label>CPF RESPONSÁVEL</label>
-                   <input class="form-control" placeholder=" " {{form.doc_responsavel_cpf}}
+                   <input class="form-control" placeholder="000.000.000-00" {{form.doc_responsavel_cpf}}
                </div>
-               <div class="form-group col-md-6">
+               <div class="form-group col-md-3">
                    <label>RG RESPONSÁVEL</label>
                    <input class="form-control" placeholder=" " {{form.rg_responsavel}}
                </div>
-               <div class="form-group col-md-6">
-                   <label>ORGÃO EXP RESPONSÁVEL</label>
-                   <input class="form-control" placeholder=" " {{form.orgao_exp_responsavel}}
+               <div class="form-group col-md-3">
+                   <label>EXP RG RESPONSÁVEL</label>
+                   <input class="form-control" placeholder="SSP" {{form.orgao_exp_responsavel}}
                </div>
-             </div>
-
-          <input type="submit" class="btn btn-success" value="Salvar">
+            </div>
+                <input class="btn btn-success" type="submit"  value="Salvar">
         </form>
         <div class="col-8 m-auto pt-2 pb-2 text-center">
             <a href="http://localhost:8000/" class="btn btn-info">Voltar</a>
